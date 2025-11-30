@@ -1,0 +1,12 @@
+name: Micro_service_Infra_deployment
+on: 
+  workflow_dispatch:
+permissions:
+  id-token: write
+  contents: read
+runs-on: ubuntu-latest
+run-name: Terraform Init and Deply
+jobs:
+  terraform-init-plan-apply:
+  
+
