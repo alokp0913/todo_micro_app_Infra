@@ -1,6 +1,6 @@
 rginfo = {
   rg1 = {
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     location            = "North Europe"
     tags = {
       created_by = "Alok"
@@ -12,9 +12,9 @@ rginfo = {
 vnet_info = {
   vnet1 = {
 
-    vnet_name           = "demovnet001"
+    vnet_name           = "todo0913vnet001"
     location            = "North Europe"
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     vnet_cidr           = ["10.10.10.0/24"]
 
     tags = {
@@ -24,11 +24,11 @@ vnet_info = {
 
     subnet_info = {
       subnet1 = {
-        subnet_name = "demo_subnet001"
+        subnet_name = "todo0913_subnet001"
         subnet_cidr = ["10.10.10.0/26"]
       }
       subnet2 = {
-        subnet_name = "demo_subnet002"
+        subnet_name = "todo0913_subnet002"
         subnet_cidr = ["10.10.10.64/26"]
       }
     }
@@ -42,9 +42,9 @@ vnet_info = {
 pip_info = {
   pip1 = {
 
-    pip_name            = "demopublic_ip-001"
+    pip_name            = "todo0913public_ip-001"
     location            = "North Europe"
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     allocation_method   = "Static"
     tags = {
       created_by = "Alok"
@@ -61,9 +61,9 @@ sql_server = {
 
   sql_server1 = {
 
-    sql_server_name              = "demosql-server001"
+    sql_server_name              = "todo0913sql-server001"
     location                     = "North Europe"
-    resource_group_name          = "demorg001"
+    resource_group_name          = "todo0913rg001"
     version                      = "12.0"
     user_mi_name                 = "alokmi001"
     administrator_login          = "cloud-user"
@@ -82,10 +82,10 @@ sql_server = {
 sql_db = {
 
   db1 = {
-    sqldb_name          = "mydemodb001"
-    sql_server_name     = "demosql-server001"
+    sqldb_name          = "mytodo0913db001"
+    sql_server_name     = "todo0913sql-server001"
     location            = "North Europe"
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     max_size_gb         = 2
     tags = {
       created_by = "Alok"
@@ -106,9 +106,9 @@ sql_db = {
 acr = {
   azurecr1 = {
 
-    acr_name            = "mydemoacr0001"
+    acr_name            = "mytodo0913acr0001"
     location            = "North Europe"
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     tags = {
       created_by = "Alok"
       managed_by = "terraform"
@@ -127,10 +127,10 @@ acr = {
 
 aks = {
   aks1 = {
-    aks_name            = "mydemoaks001"
-    acr_name            = "mydemoacr0001"
+    aks_name            = "mytodo0913aks001"
+    acr_name            = "mytodo0913acr0001"
     location            = "North Europe"
-    resource_group_name = "demorg001"
+    resource_group_name = "todo0913rg001"
     nodepool = {
       node1 = {
         pool_name  = "poolmy001"
