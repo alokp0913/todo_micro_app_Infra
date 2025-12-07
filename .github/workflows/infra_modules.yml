@@ -1,5 +1,8 @@
 name: AKS Micro infra deploye
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 permissions:
   contents: read
@@ -31,4 +34,5 @@ jobs:
         
         
     
+
 
