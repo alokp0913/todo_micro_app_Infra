@@ -10,24 +10,25 @@ jobs:
     runs-on: ubuntu-latest
     name: checkout and az login
 
-     steps:
-      - name: checkout the code onto runner
-        uses: actions/checkout@v6.0.1
-      - name: azure login with secrets OIDC based
-        uses: Azure/login@v2.3.0
-        with:
-          client-id: ${{secrets.CLIENT_ID}}
-          tenant-id: ${{secrets.TENANT_ID}}
-          subscription-id: ${{secrets.SUBSCRIPTION_ID}}
-      - name: terraform init
-        run: terraform init
-      - name: terraform plan
-        run: terraform plan -out=plan.tfplan
-      - name: terraform apply
-        run: terraform apply --auto-approve
-        
+    steps:
+    - name: checkout the code onto runner
+      uses: actions/checkout@v6.0.1
+    - name: azure login with secrets OIDC based
+      uses: Azure/login@v2.3.0
+      with:
+        client-id: ${{secrets.CLIENT_ID}}
+        tenant-id: ${{secrets.TENANT_ID}}
+        subscription-id: ${{secrets.SUBSCRIPTION_ID}}
+    - name: terraform init
+      run: terraform init
+    - name: terraform plan
+      run: terraform plan -out=plan.tfplan
+    - name: terraform apply
+      run: terraform apply --auto-approve
+      
           
       
         
         
     
+
