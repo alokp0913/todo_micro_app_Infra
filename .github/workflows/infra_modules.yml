@@ -7,6 +7,8 @@ on:
 permissions:
   contents: read
   id-token: write
+env:
+  work-dir: Env/Dev_Env
 
 jobs:
   terraform-init:
@@ -28,16 +30,20 @@ jobs:
         version: 1.13.1
     - name: terraform init
       run: terraform init
+      working-directory: ${{work-dir}}
     - name: terraform plan
       run: terraform plan -out=plan.tfplan
+      working-directory: ${{work-dir}}
     - name: terraform apply
       run: terraform apply --auto-approve
+      working-directory: ${{work-dir}}
       
           
       
         
         
     
+
 
 
 
