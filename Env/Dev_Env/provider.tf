@@ -7,9 +7,9 @@ terraform {
   }
 
   backend "azurerm" {
-    resource_group_name = "backend-rg001"
-    storage_account_name = "backendstg001"
-    container_name = "devstate"
+    resource_group_name = "yash-resource-group1"
+    storage_account_name = "yashstorageaccount9872"
+    container_name = "newcontainer11"
     key = "devacr.tfstate"
     
   }
@@ -17,5 +17,5 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = "2ee73fb1-cc35-48c5-960d-5327d2785dfa"
+# subscription_id = "49c47d3a-ee46-467f-b8ac-06b906f03845"
 }
