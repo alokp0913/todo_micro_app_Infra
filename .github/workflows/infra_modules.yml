@@ -37,14 +37,20 @@ jobs:
     - name: terraform apply
       run: terraform apply --auto-approve
       working-directory: ${{env.work-dir}}
-    - name: Terraform Destroy 
-      run: terraform destroy --auto-approve
+
+  destroy:
+      runs-on: ubuntu-latest
+      name: tf destroy
+      steps:
+      - name: Terraform Destroy 
+        run: terraform destroy --auto-approve
       
           
       
         
         
     
+
 
 
 
