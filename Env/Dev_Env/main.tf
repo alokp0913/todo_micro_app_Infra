@@ -3,6 +3,7 @@ module "RG" {
   rginfo = var.rginfo
 }
 
+
 module "vnet" {
   depends_on = [module.RG]
   source     = "../../Micro_Infra_Modules/azurerm_Virtual_network"
